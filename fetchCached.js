@@ -12,7 +12,9 @@ const maxTries = 3;
 
 const getCachedDroneById = (droneId, fail, done) => {
 	console.log('Fetch drone with caching', droneId)
-	for (let tryNum = 1; tryNum <= maxTries; tryNum++)
+	let drone;
+
+	for (let tryNum = 1; ! drone && tryNum <= maxTries; tryNum++)
 	{
 		// Try to get drone from origin
 		getDroneById(droneId,
@@ -26,17 +28,17 @@ const getCachedDroneById = (droneId, fail, done) => {
 						return // Try again
 					}
 					console.log('Got from cache', droneFromCache)
-					return done(droneFromCache)
+					drone = droneFromCache
 				})
 			},
 			droneFromOrigin => {
 				// Got drone from origin - cache and return it
 				cacheClient.set(droneId, droneFromOrigin, {expires: 600})
 					.catch(e => console.log('set failed', e))
-				return done(droneFromOrigin)
+				drone = droneFromOrigin
 			})
 	}
-	return fail('Failed to fetch')
+	return drone ? done(drone) : fail('Failed to fetch')
 }
 
 module.exports = getCachedDroneById
