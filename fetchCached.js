@@ -20,7 +20,7 @@ const getCachedDroneById = (droneId, fail, done) => {
 				console.log('Try', tryNum, 'Origin error', originError)
 				// Try to get from cache.  May have been fetched by another process.
 				cacheClient.get(droneId, (cacheErr, droneFromCache) => {
-					if (cacheErr) {
+					if (cacheErr || ! droneFromCache) {
 						// Couldn't get from cache either
 						console.log('Try', tryNum, 'Cache error', cacheErr)
 						if (tryNum > maxTries) {
