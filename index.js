@@ -23,5 +23,5 @@ const handleRequest = (req, res) => {
 }
 
 express()
-  .get('/:droneId', handleRequest)
+  .get('/:droneId(\\d{0,})', handleRequest)
   .listen(PORT, () => console.log('Listening on ' + PORT))
