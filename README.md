@@ -83,7 +83,8 @@ Bad droneId ==> 200 response, body: "null"
 https://devcenter.heroku.com/articles/memcachedcloud#using-memcached-from-node-js
 
 ```heroku addons:create memcachedcloud
-heroku addons:open memcachedcloud```
+heroku addons:open memcachedcloud
+```
 
 https://www.npmjs.com/package/memjs
 
