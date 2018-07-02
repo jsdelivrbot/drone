@@ -6,7 +6,12 @@ const cacheClient = require('./cache.js');
 
 const maxTries = 3;
 
+// - droneId: integer or string
+// - fail(error): called if all retries fail
+// - done(droneJsonString): called on successful fetch from origin or cache
+
 const getCachedDroneById = (droneId, fail, done) => {
+	console.log('Fetch drone with caching', droneId)
 	for (let tryNum = 1; tryNum <= maxTries; tryNum++)
 	{
 		// Try to get drone from origin
@@ -31,6 +36,7 @@ const getCachedDroneById = (droneId, fail, done) => {
 				return done(droneFromOrigin)
 			})
 	}
+	return fail('Failed to fetch')
 }
 
 module.exports = getCachedDroneById
