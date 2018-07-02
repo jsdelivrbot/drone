@@ -70,6 +70,9 @@ For simplicity.
 
 https://devcenter.heroku.com/articles/memcachedcloud#using-memcached-from-node-js
 
+```heroku addons:create memcachedcloud
+heroku addons:open memcachedcloud```
+
 https://www.npmjs.com/package/memjs
 
 ## Further Development
@@ -79,7 +82,7 @@ https://www.npmjs.com/package/memjs
 - https://www.npmjs.com/package/resilient
   fault tolerance, server balancing, ...
 
-- Redis - fine-grained control over caching, persist to disk
+- Redis - fine-grained control over caching, persist to disk, expiry
 
 - Handle
 -- larger volume of data
