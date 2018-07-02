@@ -107,6 +107,6 @@ https://www.npmjs.com/package/memjs
 - Redis - fine-grained control over caching, persist to disk, expiry
 
 - Handle
- - larger volume of data
- - multiple web servers with shared cache
- - multiple origin servers
+  - larger volume of data
+  - multiple web servers with shared cache
+  - multiple origin servers
