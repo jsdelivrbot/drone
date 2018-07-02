@@ -11,7 +11,6 @@ const maxTries = 3;
 // - done(droneJsonString): called on successful fetch from origin or cache
 
 const getCachedDroneById = (droneId, fail, done) => {
-	console.log('Fetch drone with caching', droneId)
 	const retry = tryNum => {
 		// Try to get drone from origin
 		getDroneById(droneId,

@@ -4,7 +4,11 @@ const PORT = process.env.PORT || 5000
 const getCachedDroneById = require('./fetchCached.js')
 
 const handleRequest = (req, res) => {
-	droneId = Math.floor(11 + 3 * Math.random()) // -> int 11..13.  Actual ids 1..12.
+	// droneId = Math.floor(11 + 3 * Math.random()) // -> int 11..13.  Actual ids 1..12.
+	const droneId = req.params.droneId
+	console.log('Fetch drone', droneId)
+	if (typeof droneId == 'undefined')
+		return res.send('Missing drone id')
 	getCachedDroneById(droneId,
 		error => {
 			res.send(droneId + ": " + error)
@@ -19,5 +23,5 @@ const handleRequest = (req, res) => {
 }
 
 express()
-  .get('/', handleRequest)
+  .get('/:droneId', handleRequest)
   .listen(PORT, () => console.log('Listening on ' + PORT))
