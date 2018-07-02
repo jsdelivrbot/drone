@@ -7,7 +7,7 @@ const handleRequest = (req, res) => {
 	// droneId = Math.floor(11 + 3 * Math.random()) // -> int 11..13.  Actual ids 1..12.
 	const droneId = req.params.droneId
 	console.log('Fetch drone', droneId)
-	if (typeof droneId == 'undefined')
+	if (droneId == '')
 		return res.send('Missing drone id')
 	getCachedDroneById(droneId,
 		error => {
