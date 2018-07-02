@@ -13,7 +13,7 @@ https://github.com/flockcover/tech-screen-instructions/blob/master/Task1.md
 - Routing structure of your choice
 - Forward request sensibly
 - Cache response
-- On fail (non-202 response, time-out), serve from cache else retry
+- On fail (non-200 response, time-out), serve from cache, else retry
 
 ## Run Locally
 
@@ -27,7 +27,10 @@ Browse to http://localhost:5000/.
 
 ## Run on Heroku
 
-Browse to https://blooming-stream-18811.herokuapp.com/.
+Browse to, e.g.
+https://blooming-stream-18811.herokuapp.com/
+https://blooming-stream-18811.herokuapp.com/1
+https://blooming-stream-18811.herokuapp.com/13
 
 Heroku git repo: https://git.heroku.com/blooming-stream-18811.git.
 

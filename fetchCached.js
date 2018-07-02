@@ -22,7 +22,7 @@ const getCachedDroneById = (droneId, fail, done) => {
 					if (cacheErr || ! droneFromCache) {
 						// Couldn't get from cache either
 						console.log('Try', tryNum, 'Cache error', cacheErr)
-						if (tryNum > maxTries) {
+						if (tryNum >= maxTries) {
 							return fail('Failed to fetch')
 						}
 						setTimeout(() => retry(tryNum+1), 1000)
@@ -36,7 +36,7 @@ const getCachedDroneById = (droneId, fail, done) => {
 				})
 			},
 			droneFromOrigin => {
-				console.log('Try', tryNum, 'From origin', droneFromOrigin)
+				console.log('Try', tryNum, 'From origin')
 				// Got drone from origin - cache and return it
 				cacheClient.set(droneId, droneFromOrigin, {expires: 600})
 					.catch(e => console.log('set failed', e))
