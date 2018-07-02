@@ -4,9 +4,10 @@ const PORT = process.env.PORT || 5000
 const getCachedDroneById = require('./fetchCached.js')
 
 const handleRequest = (req, res) => {
-	getCachedDroneById(2,
+	droneId = Math.floor(1 + 13 * Math.random()) // -> int 1..13.  Actual ids 1..12.
+	getCachedDroneById(droneId,
 		error => {
-			res.send(error)
+			res.send(droneId + ": " + error)
 		},
 		droneJsonString => {
 			res.send(droneJsonString)

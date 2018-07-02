@@ -37,7 +37,7 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/
 
 8 IP addresses
 
-All drones:
+Fetch all drones:
 
 https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drones
 
@@ -45,9 +45,10 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drones
 
 ```[drone,drone,...]```
 
+Drone ids 1..12.
 Total data: 1.2KB.
 
-Drone with droneId 1:
+Fetch drone with droneId 1:
 
 https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1
 
