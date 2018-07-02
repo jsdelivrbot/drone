@@ -2,11 +2,11 @@
 
 ## Github
 
-<https://github.com/denishowe/flock>
+https://github.com/denishowe/flock
 
 ## Spec
 
-<https://github.com/flockcover/tech-screen-instructions/blob/master/Task1.md>
+https://github.com/flockcover/tech-screen-instructions/blob/master/Task1.md
 
 - Maintainable and readable
 - Caching webserver
@@ -23,13 +23,13 @@ $ npm install
 $ npm start
 ```
 
-Browse to <http://localhost:5000/>.
+Browse to http://localhost:5000/.
 
 ## Run on Heroku
 
-Browse to <https://blooming-stream-18811.herokuapp.com/>.
+Browse to https://blooming-stream-18811.herokuapp.com/.
 
-Heroku git repo: https://git.heroku.com/blooming-stream-18811.git``.
+Heroku git repo: https://git.heroku.com/blooming-stream-18811.git.
 
 ## Source data
 
@@ -39,7 +39,7 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/
 
 All drones:
 
-<https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drones>
+https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drones
 
 ==>
 
@@ -49,7 +49,7 @@ Total data: 1.2KB.
 
 One drone:
 
-<https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1>
+https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1
 
 ==>
 
@@ -68,20 +68,20 @@ One drone:
 
 For simplicity.
 
-<https://devcenter.heroku.com/articles/memcachedcloud#using-memcached-from-node-js>
+https://devcenter.heroku.com/articles/memcachedcloud#using-memcached-from-node-js
 
-<https://www.npmjs.com/package/memjs>
+https://www.npmjs.com/package/memjs
 
 ## Further Development
 
 - Tests
 
-- <https://www.npmjs.com/package/resilient>
+- https://www.npmjs.com/package/resilient
   fault tolerance, server balancing, ...
 
 - Redis - fine-grained control over caching, persist to disk
 
 - Handle
-  -- larger volume of data
-  -- multiple web servers with shared cache
-  -- multiple origin servers
+-- larger volume of data
+-- multiple web servers with shared cache
+-- multiple origin servers
