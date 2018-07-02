@@ -47,7 +47,7 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drones
 
 Total data: 1.2KB.
 
-One drone:
+Drone with droneId 1:
 
 https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1
 
@@ -63,6 +63,8 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1
     "numCrashes":123
 }
 ```
+
+Bad doneId ==> 200 response, body: "null"
 
 ## Memcached
 
