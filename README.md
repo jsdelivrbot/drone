@@ -68,11 +68,17 @@ https://bobs-epic-drone-shack-inc.herokuapp.com/api/v0/drone/1
 }
 ```
 
-Bad doneId ==> 200 response, body: "null"
+Bad droneId ==> 200 response, body: "null"
 
-## Memcached
+## Implementation Choices
 
-For simplicity.
+- Express (used before, full featured but simple)
+- Memcached (simpler than redis)
+- superagent (used before)
+- Heroku (used before, easy, free)
+- Simple callback functions instead of promises
+
+## Memcache
 
 https://devcenter.heroku.com/articles/memcachedcloud#using-memcached-from-node-js
 
@@ -81,9 +87,18 @@ heroku addons:open memcachedcloud```
 
 https://www.npmjs.com/package/memjs
 
-## Further Development
+## Assumptions
+
+- Shared cache required (otherwise could just cache in memory in each instance)
+- memcached service is reliable (otherwise need to handle connect failure)
+- total number of drones might be much larger (otherwise could just cache all drones as one object)
+- No transformation of origin data required
+
+## Compromises and Further Development
 
 - Tests
+
+- Promises - convert callbacks to promises
 
 - https://www.npmjs.com/package/resilient
   fault tolerance, server balancing, ...
