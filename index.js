@@ -1,7 +1,7 @@
 const express = require('express')
 const PORT = process.env.PORT || 5000
 
-const getCachedDroneById = require('./fetchCached')
+const getCachedDroneById = require('./fetchCached.js')
 
 const handleRequest = (req, res) => {
 	getCachedDroneById(2,
