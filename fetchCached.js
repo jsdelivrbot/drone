@@ -25,10 +25,10 @@ const getCachedDroneById = (droneId, fail, done) => {
 				cacheClient.get(droneId, (cacheErr, droneFromCache) => {
 					if (cacheErr) {
 						console.log('Try', tryNum, 'Cache error', cacheErr)
-						return // Try again
+					} else {
+						drone = droneFromCache.toString()
+						console.log('Got from cache', drone)
 					}
-					console.log('Got from cache', droneFromCache)
-					drone = droneFromCache
 				})
 			},
 			droneFromOrigin => {
