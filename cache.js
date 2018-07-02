@@ -7,4 +7,6 @@ const client = memjs.Client.create(process.env.MEMCACHEDCLOUD_SERVERS, {
 	password: process.env.MEMCACHEDCLOUD_PASSWORD
 })
 
+client.flush()		// Start empty for testing
+
 module.exports = client
