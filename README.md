@@ -1,12 +1,8 @@
-# Denis Howe - Flock tech test
+# Denis Howe - Drone API demo
 
 ## Github
 
-https://github.com/denishowe/flock
-
-## Spec
-
-https://github.com/flockcover/tech-screen-instructions/blob/master/Task1.md
+https://github.com/denishowe/drone
 
 - Maintainable and readable
 - Caching webserver
@@ -18,7 +14,7 @@ https://github.com/flockcover/tech-screen-instructions/blob/master/Task1.md
 ## Run Locally
 
 ```sh
-$ git clone git@github.com:denishowe/flock.git
+$ git clone git@github.com:denishowe/drone.git
 $ npm install
 $ npm start
 ```
